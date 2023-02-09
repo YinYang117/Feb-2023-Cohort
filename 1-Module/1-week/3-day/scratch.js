@@ -132,12 +132,9 @@ Define a function with two params
   return the comparison
 
 Execute the plan
-
-
 Review/Improve
-
-
 */
+
 function alphabetical (word1, word2) {
   return word1.toLowerCase() < word2.toLowerCase();
 }
@@ -148,22 +145,3 @@ console.log(alphabetical("Cat", "cat")) //=> false
 console.log(alphabetical("Cat", "hat")) //=> true
 console.log(alphabetical("hat", "cat")) //=> false
 console.log(alphabetical("zebra", "fish")) //=> false
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
