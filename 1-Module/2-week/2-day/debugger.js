@@ -4,20 +4,20 @@
 //		and another sub-array of all the numbers
 
 function returnInTheLoop(arr){
-	let finalArr = [];
-	let letterArr = [];
-	let numberArr = [];
-
 	for (let i = 0; i < arr.length; i++) {
+		let finalArr = [];
+		let letterArr = [];
+		let numberArr = [];
 		let abc = "abc"
 		let nums = "123"
 		if (abc.includes(arr[i])) {
 			letterArr.push(arr[i])
 		}
 	}
+	
 	for (let i = 0; i < arr.length; i++) {
-		arr[i];
 		if (nums.includes(arr[i])) {
+			let arr[i] = nums[i]
 			numberArr.push(arr[i])
 		}
 		finalArr = letterArr + numberArr
