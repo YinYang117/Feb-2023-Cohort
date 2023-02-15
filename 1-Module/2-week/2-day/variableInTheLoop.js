@@ -2,8 +2,8 @@
 // But when we try to return it, we get a reference Error
 
 function variableInTheLoop(arr){
+	let newArr = [];
 	for (let i = 0; i < arr.length; i++) {
-		let newArr = [];
 		newArr.push(arr[i])
 	}
 	return newArr
