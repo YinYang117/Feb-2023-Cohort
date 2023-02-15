@@ -8,9 +8,11 @@ function returnInTheLoop(arr){
 		if (abc.includes(arr[i])) {
 			newArr.push(arr[i])
 		}
+		console.log("i: ", i)
 		return newArr
 	}
+
 }
 
 let arr1 = ["a", "b", "c", "1", "2", "3"]
-console.log(returnInTheLoop(arr1)) // abc
+console.log(returnInTheLoop(arr1)) // [a,b,c]

@@ -1,4 +1,4 @@
-// This function is trying to create a new variable in the loop
+// This function is trying to create a new array in the loop
 // But when we try to return it, we get a reference Error
 
 function variableInTheLoop(arr){
@@ -10,4 +10,4 @@ function variableInTheLoop(arr){
 }
 
 let arr1 = ["a", "b", "c", "1", "2", "3"]
-console.log(variableInTheLoop(arr1)) //abc123
+console.log(variableInTheLoop(arr1)) // [ 'a', 'b', 'c', '1', '2', '3' ]
