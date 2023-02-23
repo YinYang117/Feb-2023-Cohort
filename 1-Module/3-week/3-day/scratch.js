@@ -1,112 +1,96 @@
-// let arr = [1, 2, 3]; // brackets, elements at index(s)
-// let mylo = { age: 1000, name: 'Mylo' }; // brackets (curly), values at keys
+// let obj = {}
 
-// console.log(arr[1]) // indexing into the array at index 1
-// console.log(mylo['age']) // keying into the object at 'age'
 
-// arr[1] = 5;
-// console.log(arr);
-// mylo['age'] = 1001;
-// console.log(mylo);
-// mylo['location'] = "Chicago";
-// console.log(mylo);
+// obj['something'] = 'some value'
 
-// let attr = 'name';
-// console.log(attr);
-// console.log(mylo[attr]); // mylo['name']
+// console.log(obj)
 
-// console.log(mylo['age']); // keying into the object at 'age'
-// console.log(mylo.age);
-// WE DON'T USE DOT NOTATION WHEN WANTING TO USE A VARIABLE
+// let test = 'something'
 
-// let obj = {
-//   name: "Mylo",
-//   age: 1000,
-//   game: {
-//     name: "Dota 2",
-//     position: 5,
-//     favHero: "Dazzle",
-//   },
-// };
+// console.log(obj[test])
 
-// let arr = [
-//   [1, 2, 3],
-//   [4, 5, 6],
-// ];
-// console.log(arr[0][2]);
-// console.log(obj['game']['name'])
-// console.log(obj.game.name)
+// let string = 'apple'
+// let obj = {};
 
-// checking to see if a key is in an object
 
-// let obj2 = {
-//   firstName: "Oscar",
-//   secondName: "Mayer",
+
+function buildObj(obj) {
+    let stringArr = string.split('');
+    for (let i = 0; i < stringArr.length; i++) {
+        let char = stringArr[i];
+
+        if (obj[char] !== undefined) {
+            obj[char]++
+
+        } else {
+            obj[char] = 1
+
+        }
+
+
+    }
+
+    return obj
+
+}
+
+buildObj(obj);
+
+//{ a: 1, p: 2, l: 1, e: 1 }
+
+function getMaxCount(obj) {
+    let max = 0;
+    let char = undefined;
+
+    for (let key in obj) {
+        console.log(values, "     <-----this is the key")
+        let value = obj[key];
+        // console.log(value);
+        if (value > max) {
+            max = value;
+            char = key;
+        }
+    }
+    return char
+
+}
+
+
+// console.log(getMaxCount(obj))
+
+
+
+
+// let arr = ['a','p','p','l','e']
+// console.log(arr[2])
+
+
+// let spiderMan = {
+//     realName: 'Peter Parker',
+//     superName: 'Spider-Man',
+//     hasParents: false,
+//     numberOfFriends: 2,
+//     powers: ['web-sling', 'super strength', 'wall climb'],
+//     printSlogan: () => 'With great power comes great responsibilities',
+//     mentor: {
+//         realName: 'Tony Stark',
+//         superName: 'Iron Man',
+//         powers: ['super smart', 'super rich'],
+//         printSlogan: () => 'I am Iron Man'
+//     }
 // }
 
-// console.log(obj2.firstName !== undefined);
-// console.log('firstName' in obj2);
 
-// let car = {
-//   year: 2001,
-//   make: "Ford",
-//   model: "Explorer",
-//   color: "pink",
-// };
-
-// // for in loop
-// for (let key in car) { 
-//   console.log(key);
-//   console.log(car[key])
-//   console.log('-----')
-// }
-// // Object.keys
-// let keys = Object.keys(car);
-// console.log(keys);
-// for (let i = 0; i < keys.length; i++) { 
-//   let key = keys[i];
-//   console.log(key);
-//   console.log(car[key]);
-//   console.log('---');
-// }
-// // Object.values
-// let values = Object.values(car);
-// console.log(values)
-// for (let i = 0; i < values.length; i++) {
-//   let value = values[i];
-//   console.log(value);
-//   console.log("---");
+// let apple = {
+//     a: 1,
+//     p: 2,
+//     l: 1,
+//     e: 1
 // }
 
-// Object.entries
-  // for your research!!
+// let keysArr = Object.keys(apple) //returns an arr of keys
+// let valsArr = Object.values(apple) //retyrbs an arr
+// // let bothArr = Object.entries(apple)
+// // console.log(bothArr[0][1])
 
-  /*
-    Object are UNORDERED
-    Constant time lookup
-  */
-
-
-
-
-
-let age = 10;
-let numberOfFingers = age;
-age = numberOfFingers + 1;
-console.log(age, numberOfFingers); // 11, 10
-
-
-
-
-
-
-let biff = {
-  type: "dog",
-  age: 10,
-};
-
-let buster = biff;
-buster.age = 0;
-
-console.log(biff, buster); // Two objs with age 0
-console.log(biff === buster)
+// ['a', 1, true]
