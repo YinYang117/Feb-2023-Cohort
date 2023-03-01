@@ -1,26 +1,25 @@
-myFilter = (arr) => {
-	let res = []
+let myFilter = (arr) => {
+	let filtered = []
 	for (let i = 0; i < arr.length; i++) {
-		if (Array.isArray(arr[i])) {
-			res.push(arr[i])
-		} 
+		if (arr[i] % 2 === 0) filtered.push(arr[i])
 	}
-	return res
+	return filtered
 }
 
-myCallbackFilter = (el) => Array.isArray(el)
+let arr = [2, 22, 1000, -1, 1, 3]
+let arr2 = ["hehehe"]
 
-let arr = [
-	["test"],
-	[1, 2, 3],
-	"hello world",
-	{car: "mustang"}
-]
+let isEven = (el, i, array) => {
+	console.log(array[i])
+	return el % 2 === 0
+}
 
-let resultOfFunction = arr.filter( myCallbackFilter )
+// let res = myFilter(arr)
 
-// let resultOfFunction = myFilter(arr) 
-console.log(resultOfFunction) // [ ["test"], [1, 2, 3] ]
-arr[0][0] = "Ive been changed!!!"
-console.log(resultOfFunction) // [ ["Ive been changed!!!"], [1, 2, 3] ]
+// console.log(res) // 2, 22, 1000
 
+let builtInFilter = arr.filter(num => num % 2 === 0)
+let builtInFilter2 = arr.filter(isEven)
+
+console.log(builtInFilter) // 2, 22, 1000
+console.log(builtInFilter2) // 2, 22, 1000
