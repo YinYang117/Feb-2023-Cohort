@@ -4,8 +4,10 @@ and console.logs both strings on one line
 */
 
 function printer(string1, string2) {
-
+	console.log(string1 + string2)
 }
 
 let banana = "I'm making a program that can "
 let apple = "let me do all the things!"
+
+printer(banana, apple)

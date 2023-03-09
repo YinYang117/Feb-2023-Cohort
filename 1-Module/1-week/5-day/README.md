@@ -2,11 +2,10 @@
 
 ## Plan for today
 
-  1. Lecture - About an hour
-  2. Practice problems (Call in a TA!)
+  1. Watch graduation
+  2. Practice problems
   3. Lunch
-  4. Practice Assessment
-  5. Practice Assessment Walkthrough || More Practice
+  4. More Practice problems!
 
 ## Function Expression Syntax
 
