@@ -33,13 +33,15 @@ class Adventurer {
 const ryan = new Adventurer('ryan');
 const anthony = new Adventurer('Anthony');
 // console.log(ryan)
-ryan.changeName('Ryan');
-// console.log(ryan)
-// console.log(anthony)
-ryan.levelUp(5);
-anthony.levelUp();
-anthony.levelUp();
-console.log(anthony, ryan)
+// ryan.changeName('Ryan');
+// // console.log(ryan)
+// // console.log(anthony)
+// ryan.levelUp(5);
+// anthony.levelUp();
+// anthony.levelUp();
+// console.log(anthony, ryan)
 // for(let i = 0; i < )
 
 // console.log(ryan)
+
+module.exports = Adventurer;
