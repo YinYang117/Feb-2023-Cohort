@@ -1,6 +1,52 @@
-let newDay = new Date()
-console.log(newDay)
+function constantLoop(n) {
+    let total = 0;
+    for (let i = 1; i <= 100; i++) {
+        total += i
+    }
+    return total;
+}
 
+function forLoop(n) {
+    let total = 0;
+    for (let i = 1; i <= n; i++) {
+        total += i;
+    }
+    return total;
+}
+
+
+function nestedLoop(n) {
+    let total = 0;
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n; j++) {
+            total += i
+        }
+    }
+    return total;
+}
+
+function doubleNestedLoop(n) {
+    let total = 0;
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n; j++) {
+            for (let k = 1; k <= n; k++)
+                total += i
+        }
+    }
+    return total;
+}
+
+
+let increment = 100;
+for (let n = increment; n <= increment * 100; n += increment) {
+    let startTime = Date.now();
+    constantLoop(n)
+    forLoop(n);
+    nestedLoop(n);
+    doubleNestedLoop(n);
+    let endTime = Date.now();
+    console.log("".concat(endTime - startTime));
+}
 
 // let pushTimer = (arr, ...thingsToPush) => {
 // 	arr.push(...thingsToPush)
