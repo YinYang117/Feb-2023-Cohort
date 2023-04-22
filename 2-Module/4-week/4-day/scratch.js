@@ -1,87 +1,83 @@
-// Linked Lists!
-class LinkedList {
-    constructor(){
-        this.head = null;
-        this.tail = null;
+// // sets!
+
+// // sets are used to collect unique, unordered* values
+
+// // Why sets?
+
+// // Constant lookup times for any value in that set
+
+// // const mySet = new Set("abcdefazbcdefz");
+
+// // console.log(mySet);
+
+// // console.log(mySet.has("g"))
+
+// function findSharedValues(arr1, arr2){
+//     const seen = new Set(arr1);
+//     return arr2.filter(ele => seen.has(ele))
+// }
+
+// const nums1 = [1, 1.1, 2, 3, 4, 7, 10, 11, 100, 1230, 123, 600, 700, 564];
+// const nums2 = [1.1, 3, 4, 7, 8, 100, 11, 564, 565, 1200, 17872, 18971, 126, 753];
+
+// console.log(findSharedValues(nums1, nums2))
+
+// const findUniques = input => new Set(input);
+
+// const str = "This is a string that definitely contains some characters that appear more than once."
+
+// console.log(findUniques(str))
+
+// const stringSet = new Set();
+// stringSet.add(str);
+// console.log(stringSet);
+
+// caching
+
+function mostFrequentChar(str) {
+    // let most, mostCount;
+
+    // for(let i = 0; i < str.length; i++){
+    //     let currChar = str[i];
+    //     if (currChar === " ") continue;
+    //     let currCount = 0;
+    //     for (let j = 0; j < str.length; j++){
+    //         let innerChar = str[j];
+    //         if (currChar === innerChar) currCount++;
+    //     }
+    //     if (!most || !mostCount || currCount > mostCount){
+    //         most = currChar;
+    //         mostCount = currCount;
+    //     }
+    // }
+
+    // return most;
+
+    const cache = {};
+    
+    for (const char of str) char === " " ? null : cache[char] ? cache[char]++ : cache[char] = 1;
+
+    let most = str[0];
+
+    for (const char in cache) {
+        if (cache[char] > cache[most]) most = char;
     }
 
-    addToHead(val){
-        const node = new Node(val);
-        const oldHead = this.head;
-        node.next = oldHead;
-        if (oldHead) oldHead.prev = node;
-        this.head = node;
-        if (!this.tail) this.tail = node;
-    }
-
-    addToTail(val){
-        /* O(n) - no pointer to tail
-        // const node = new Node(val);
-        // let current = this.head;
-        // while(current.next) current = current.next;
-        // current.next = node;
-        */
-        // O(1) - with pointer to tail
-        const node = new Node(val);
-        const oldTail = this.tail;
-        this.tail = node;
-        node.prev = oldTail;
-        if (oldTail) oldTail.next = node;
-    }
-
-    removeFromHead(){
-        // O(1)
-        const head = this.head;
-        this.head = head.next;
-        this.head.prev = null;
-        if (head === this.tail) this.tail = null;
-        return head;
-    }
-
-    removeFromTail(){
-        // O(n)
-        // const tail = this.tail;
-        // let current = this.head;
-        // while (current.next !== this.tail) current = current.next;
-        // this.tail = current;
-        // current.next = null;
-        // return tail;
-        const tail = this.tail;
-        this.tail = tail.prev;
-        this.tail.next = null;
-        return tail;
-    }
-
-    traverse(){
-        let current = this.head;
-        while (current){
-            process.stdout.write(current.value + " -> ")
-            current = current.next;
-        }
-        // console.log(current)
-    }
+    return most;
 }
 
-class Node {
-    constructor(val){
-        this.value = val;
-        this.next = null;
-        this.prev = null;
-    }
+// console.log(mostFrequentChar("What is the most frequent character in this string?"));
+
+function fibonacci(n){
+    if (n <= 1) return n
+    return fibonacci(n-1) + fibonacci(n-2)
 }
 
-const myLinkedList = new LinkedList();
-myLinkedList.addToHead(0)
-myLinkedList.addToHead(-1)
-myLinkedList.addToHead(-2)
-myLinkedList.addToTail(1)
-myLinkedList.addToTail(2)
-myLinkedList.addToTail(3)
-myLinkedList.traverse();
-// console.log(myLinkedList)
-console.log(myLinkedList.removeFromHead())
-console.log(myLinkedList.removeFromHead())
-myLinkedList.traverse();
-console.log(myLinkedList.removeFromTail())
-console.log(myLinkedList.removeFromTail())
-myLinkedList.traverse();
+// console.log(fibonacci(43))
+
+function fibTab(n, fibs=[0,1,1]){
+    if (fibs[n]) return fibs[n]
+    return fibs[n] = fibTab(n-1, fibs) + fibTab(n-2, fibs)
+}
+
+console.log(fibTab(1477))
