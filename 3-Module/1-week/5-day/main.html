@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Introduction to CSS: A Medieval Adventure</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+  <header>
+    <h1>Introduction to CSS: A Medieval Adventure</h1>
+  </header>
+
+  <main id="main">
+    <section>
+      <h2>What is CSS?</h2>
+      <p>CSS stands for Cascading Style Sheets. It is a language used to style HTML documents and control the appearance
+        of web pages. With CSS, you can add colors, fonts, backgrounds, borders, and other decorative elements to your
+        web page.</p>
+    </section>
+
+    <section>
+      <h2>How does CSS work?</h2>
+      <p>CSS works by targeting HTML elements and applying styles to them. You can target elements by their
+        <span class="bold">tag name</span>,
+        <span class="bold">class name</span>, or
+        <span class="bold">ID</span>. For example:
+      </p>
+
+      <pre>
+				<code>
+					p {
+					    color: red;
+					}
+					
+					.header {
+					    font-size: 24px;
+					    text-align: center;
+					}
+					
+					#main {
+					    background-color: #fff;
+					    border: 1px solid black;
+					    padding: 10px;
+					}
+				</code>
+			</pre>
+
+      <p>In this example, the first rule targets all p elements on the page and sets their color to red. The second rule
+        targets elements with the class name "header" and sets their font size to 24 pixels and text alignment to
+        center. The third rule targets an element with the ID "main" and sets its background color to white, border to 1
+        pixel solid black, and padding to 10 pixels.</p>
+    </section>
+
+    <section>
+      <h2>CSS Positioning Examples</h2>
+      <div class="position-examples">
+        <div class="position-absolute-example">
+          <h3>Position Absolute Example</h3>
+          <div class="box-1"></div>
+          <div class="box-2"></div>
+        </div>
+        <div class="position-sticky-example">
+          <h3>Position Sticky Example</h3>
+          <div class="box-3"></div>
+          <!-- Box 4 sticky has a bug I can't figure out. -->
+          <!-- <div class="box-4"></div> -->
+        </div>
+      </div>
+    </section>
+  
+    <section>
+      <h2>CSS Selector Specificity Examples</h2>
+      <div class="selector-specificity-examples">
+        <div class="selector-specificity-example-1">
+          <h3>Example 1</h3>
+          <p class="example-paragraph">This is an example of a paragraph with class "example-paragraph".</p>
+        </div>
+        <div class="selector-specificity-example-2">
+          <h3>Example 2</h3>
+          <p id="example-paragraph">This is an example of a paragraph with id "example-paragraph".</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Creating a Medieval-Themed Web Page</h2>
+      <p>Now that we know how CSS works, let's create a web page with a medieval theme! We can use background images,
+        custom fonts, and other CSS properties to give our page a medieval feel.</p>
+
+      <div class="example">
+        <h3>Example:</h3>
+        <p>Here's a simple medieval-themed web page using CSS:</p>
+        <div class="medieval">
+          <h1>Ye Olde Web Page</h1>
+          <p>Welcome to my humble web abode! Here, we celebrate all things medieval and fantastical.</p>
+          <p>Whether you're a knight, a princess, or a dragon, there's something for everyone here. Explore our
+            galleries of medieval art, music, and literature, or join our community of like-minded enthusiasts.</p>
+          <p>So come on in, grab a mug of mead, and make yourself at home. Huzzah!</p>
+          <a href="#" class="medieval-button">Join the quest!</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Knights of the HTML Table</p>
+  </footer>
+
+  <script>
+    document.querySelector('.medieval-button').addEventListener('click', function() {
+      alert(`${Math.random()}`);
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+/* Set the background color of the entire page */
+body {
+    background-color: beige;
+}
+
+/* Center the header text and set its font */
+header {
+    font-family: 'Georgia', serif;
+}
+
+/* Style the main content section */
+main {
+    background-color: #fff;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+}
+
+/* #main {
+    background-color: green;
+    border: 1px solid black;
+    padding: 10px;
+} */
+
+/* Style the section headings */
+section h2 {
+    color: #8B0000;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Style the paragraph text */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Add a border and margin to the example box */
+.example {
+    border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+}
+
+.medieval {
+    background-image: url('Medieval_Cologne_\(43839336\).jpeg');
+    background-size: cover;
+    font-family: 'IM Fell English', serif;
+    color: #FFF8DC;
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.medieval h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.medieval p {
+    font-size: 24px;
+    line-height: 1.5;
+    color: black;
+    font-weight: 800;
+}
+
+.medieval-button {
+    display: inline-block;
+    background-color: #8B0000;
+    color: #FFF8DC;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 24px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.medieval-button:hover {
+    background-color: #FFF8DC;
+    color: #8B0000;
+    cursor:grab;
+}
+
+
+/* Positioning Examples */
+.position-examples {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.position-absolute-example {
+    border: 1px solid black;
+    padding: 20px;
+    width: 48%;
+    position: relative;
+}
+
+.position-sticky-example {
+    border: 1px solid black;
+    padding: 20px;
+    width: 48%;
+    position: relative;
+}
+
+.box-1,
+.box-2,
+.box-3,
+.box-4 {
+    height: 100px;
+    width: 100px;
+}
+
+/* Position Absolute Example */
+.position-absolute-example .box-1 {
+    background-color: #8B0000;
+    color: white;
+    position: absolute;
+    top: 200px;
+    left: 20px;
+}
+
+.position-absolute-example .box-2 {
+    background-color: #F4A460;
+    color: white;
+    position: absolute;
+    top: 400px;
+    left: 400px;
+}
+
+/* Position Sticky Example */
+.position-sticky-example {
+    height: 2000px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.position-sticky-example .box-3 {
+    position: sticky;
+    top: 0;
+    background-color: rgb(255, 187, 0);
+    border-radius: 10em;
+}
+/* Not sure why box 4 isn't sticky in this example. */
+/* .position-sticky-example .box-4 {
+    position: sticky;
+    background-color: #008000;
+    left: 200px;
+} */
+
+/* Selector Specificity Examples */
+.selector-specificity-examples {
+    display: flex;
+    justify-content: space-between;
+}
+
+.selector-specificity-example-1,
+.selector-specificity-example-2 {
+    border: 1px solid black;
+    padding: 20px;
+    width: 48%;
+}
+
+.example-paragraph {
+    color: #8B0000;
+    font-size: 16px;
+    margin: 0;
+}
+
+.selector-specificity-example-1 .example-paragraph {
+    font-weight: bold;
+}
+
+#example-paragraph {
+    font-style: italic;
+}
+
+
+
+
+
+
+
+header {
+    font-size: 34px;
+    text-align: center;
+}
